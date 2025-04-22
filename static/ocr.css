@@ -1,0 +1,174 @@
+/* General Styles */
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f4f4f4;
+	padding: 10px; /* Mengurangi padding untuk mobile */
+	margin: 0;
+}
+
+/* Scanner Box */
+.scanner-box {
+	background-color: #ffffff;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	padding: 15px; /* Mengurangi padding untuk mobile */
+	margin: 10px auto; /* Mengurangi margin untuk mobile */
+	width: 95%; /* Lebih lebar untuk mobile */
+	max-width: 600px;
+	text-align: center;
+}
+
+.scanner-box h1 {
+	font-size: 1.5rem; /* Ukuran font lebih kecil untuk mobile */
+	color: #2c3e50;
+	margin-bottom: 10px; /* Mengurangi margin untuk mobile */
+}
+
+.scanner-box p {
+	font-size: 0.9rem; /* Ukuran font lebih kecil untuk mobile */
+	color: #34495e;
+	margin-bottom: 15px; /* Mengurangi margin untuk mobile */
+}
+
+.scanner-box label {
+	display: block;
+	font-size: 0.9rem; /* Ukuran font lebih kecil untuk mobile */
+	font-weight: bold;
+	margin-bottom: 8px; /* Mengurangi margin untuk mobile */
+	color: #34495e;
+	text-align: left;
+}
+
+.scanner-box input[type="file"],
+.scanner-box input[type="text"] {
+	width: 100%;
+	padding: 8px; /* Mengurangi padding untuk mobile */
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	background-color: #f9f9f9;
+	margin-bottom: 10px; /* Mengurangi margin untuk mobile */
+	font-size: 0.9rem; /* Ukuran font lebih kecil untuk mobile */
+	color: #333;
+}
+
+.scanner-box button {
+	background-color: #3498db;
+	color: white;
+	padding: 8px 15px; /* Mengurangi padding untuk mobile */
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 0.9rem; /* Ukuran font lebih kecil untuk mobile */
+	transition: background-color 0.3s ease;
+	width: 100%;
+}
+
+.scanner-box button:hover {
+	background-color: #2980b9;
+}
+
+/* Result Box */
+.result-box {
+	background-color: #ffffff;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	padding: 15px; /* Mengurangi padding untuk mobile */
+	margin: 10px auto; /* Mengurangi margin untuk mobile */
+	width: 95%; /* Lebih lebar untuk mobile */
+	max-width: 600px;
+	text-align: left;
+}
+
+.result-box h2 {
+	color: #2c3e50;
+	margin-bottom: 10px; /* Mengurangi margin untuk mobile */
+	font-size: 1.3rem; /* Ukuran font lebih kecil untuk mobile */
+}
+
+.result-box p {
+	background-color: #ecf0f1;
+	padding: 8px; /* Mengurangi padding untuk mobile */
+	border-radius: 5px;
+	border-left: 5px solid #3498db;
+	margin-bottom: 8px; /* Mengurangi margin untuk mobile */
+	font-size: 0.8rem; /* Ukuran font lebih kecil untuk mobile */
+}
+
+.result-box h3 {
+	margin-top: 15px; /* Mengurangi margin untuk mobile */
+	color: #34495e;
+	font-size: 1rem; /* Ukuran font lebih kecil untuk mobile */
+}
+
+.result-box img {
+	max-width: 100%;
+	height: auto;
+	margin: 8px 0; /* Mengurangi margin untuk mobile */
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries untuk Perangkat Mobile */
+@media (max-width: 768px) {
+	.scanner-box h1 {
+		 font-size: 1.3rem; /* Ukuran font lebih kecil untuk tablet */
+	}
+
+	.scanner-box input[type="file"],
+	.scanner-box input[type="text"] {
+		 font-size: 0.8rem; /* Ukuran font lebih kecil untuk tablet */
+	}
+
+	.scanner-box button {
+		 font-size: 0.8rem; /* Ukuran font lebih kecil untuk tablet */
+	}
+
+	.result-box h2 {
+		 font-size: 1.2rem; /* Ukuran font lebih kecil untuk tablet */
+	}
+
+	.result-box p {
+		 font-size: 0.75rem; /* Ukuran font lebih kecil untuk tablet */
+	}
+
+	.result-box h3 {
+		 font-size: 0.9rem; /* Ukuran font lebih kecil untuk tablet */
+	}
+}
+
+@media (max-width: 480px) {
+	.scanner-box {
+		 padding: 10px; /* Mengurangi padding untuk mobile */
+	}
+
+	.scanner-box h1 {
+		 font-size: 1.2rem; /* Ukuran font lebih kecil untuk mobile */
+	}
+
+	.scanner-box input[type="file"],
+	.scanner-box input[type="text"] {
+		 padding: 6px; /* Mengurangi padding untuk mobile */
+	}
+
+	.scanner-box button {
+		 padding: 6px 12px; /* Mengurangi padding untuk mobile */
+	}
+
+	.result-box {
+		 padding: 10px; /* Mengurangi padding untuk mobile */
+	}
+
+	.result-box h2 {
+		 font-size: 1.1rem; /* Ukuran font lebih kecil untuk mobile */
+	}
+
+	.result-box p {
+		 font-size: 0.7rem; /* Ukuran font lebih kecil untuk mobile */
+	}
+
+	.result-box h3 {
+		 font-size: 0.8rem; /* Ukuran font lebih kecil untuk mobile */
+	}
+}

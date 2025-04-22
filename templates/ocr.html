@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>OCR Sertifikat</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='ocr.css') }}">
+    </head>
+<body>
+    <div class="scanner-box">
+        <h1>Upload Gambar Produk</h1>
+        <form method="POST" enctype="multipart/form-data" action="{{ url_for('upload') }}">
+            <label for="file">Pilih Gambar:</label>
+            <input type="file" name="file" id="file" accept="image/*"> 
+            <p>Atau</p>
+            <label for="manual_certificate_no">Masukkan Nomor Sertifikat Secara Manual:</label>
+            <input type="text" name="manual_certificate_no" id="manual_certificate_no" placeholder="Masukkan nomor sertifikat">
+            <button type="submit">Cek Sertifikat</button>
+        </form>
+    </div>
+
+    {% if matched_certificate %}
+        <div class="result-box">
+            <h2>Sertifikat Ditemukan:</h2>
+            <p><strong>Nomor Sertifikat:</strong> {{ matched_certificate['certificate_no'] }}</p>
+            <p><strong>Produk:</strong> {{ matched_certificate['product_name'] }}</p>
+            <p><strong>Perusahaan:</strong> {{ matched_certificate['company'] }}</p>
+            <p><strong>Alamat Pabrik:</strong> {{ matched_certificate['factory_address'] }}</p>
+            <p><strong>Tanggal Diterbitkan:</strong> {{ matched_certificate['certificate_issued'] }}</p>
+        </div>
+    {% elif detected_certificates %}
+        <div class="result-box">
+            <h2>Nomor Sertifikat yang Terdeteksi:</h2>
+            <ul>
+                {% for cert in detected_certificates %}
+                    <li>{{ cert }}</li>
+                {% endfor %}
+            </ul>
+            <p>Tidak ada sertifikat yang ditemukan.</p>
+        </div>
+    {% endif %}
+
+    {% if output_image %}
+        <div class="result-box">
+            <h2>Hasil Gambar:</h2>
+            <img src="{{ url_for('static', filename='uploads/' + output_image.split('/')[-1]) }}" alt="Hasil OCR">
+        </div>
+    {% endif %}
+</body>
+</html>
