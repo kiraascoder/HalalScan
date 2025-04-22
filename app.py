@@ -12,7 +12,7 @@ app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'static/uploads'
 
 # Konfigurasi Tesseract
-pytesseract.pytesseract.tesseract_cmd = os.getenv('TESSERACT_CMD', 'tesseract')
+pytesseract.pytesseract.tesseract_cmd = 'tesseract'
 myconfig = r"--psm 11 --oem 3"
 
 def get_db_connection():
