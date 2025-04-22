@@ -1,2 +1,8 @@
 [phases.setup]
-nixPkgs = ['libGL', 'glib', 'fontconfig', 'freetype']
+nixPkgs = ['python312', 'libGL', 'glib', 'freetype', 'fontconfig']
+
+[phases.build]
+cmds = ["pip install -r requirements.txt"]
+
+[start]
+cmd = "python app.py"
